@@ -1,0 +1,185 @@
+.ticket-page-premium {
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header Elements */
+.admission-icon-premium {
+  width: 70px;
+  height: 70px;
+  background: var(--primary-gradient);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: white;
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+}
+
+.text-primary-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge-premium-v2 {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+}
+
+.telemetry-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 20px;
+  border-radius: 50px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot-live {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #10b981;
+  animation: pulse-live 2s infinite;
+}
+
+@keyframes pulse-live {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Admission Nodes */
+.admission-node {
+  transition: all 0.4s ease;
+  position: relative;
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.admission-node:hover {
+  transform: scale(1.01);
+  border-color: var(--primary);
+}
+
+.security-stub {
+  background: #0f172a;
+  border-right: 2px dashed rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.security-stub::before,
+.security-stub::after {
+  content: '';
+  position: absolute;
+  right: -11px;
+  width: 22px;
+  height: 22px;
+  background: var(--bg-color); /* Matches page background */
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.security-stub::before { top: -11px; }
+.security-stub::after { bottom: -11px; }
+
+.stub-id-pill {
+  background: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--primary);
+  border: 1px solid var(--border-light);
+}
+
+.node-id {
+  background: var(--primary-gradient);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-weight: 900;
+  font-size: 0.75rem;
+  color: white;
+}
+
+.status-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  margin-top: 10px;
+}
+
+.status-tag.upcoming { background: rgba(99, 102, 241, 0.1); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.2); }
+.status-tag.today { background: rgba(16, 185, 129, 0.1); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.2); }
+.status-tag.past { background: #f1f5f9; color: var(--text-muted); border: 1px solid var(--border-light); }
+.status-tag.cancelled { background: rgba(239, 68, 68, 0.1); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.2); }
+
+.meta-label {
+  font-size: 0.65rem;
+  font-weight: 900;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+
+.meta-value {
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.border-white-5 { border: 1px solid var(--border-light) !important; }
+.border-danger-low { border-color: rgba(239, 68, 68, 0.2) !important; }
+
+.shadow-glow-sm {
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+@media (max-width: 767px) {
+  .security-stub {
+    border-right: none;
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.1);
+  }
+  .security-stub::before, .security-stub::after {
+    bottom: -11px;
+    top: auto;
+  }
+  .security-stub::before { left: -11px; right: auto; }
+  .security-stub::after { right: -11px; }
+  
+  .dashboard-header-premium { text-align: center; }
+  .admission-icon-premium { margin: 0 auto 20px; }
+  .display-4 { font-size: 2.5rem; }
+}

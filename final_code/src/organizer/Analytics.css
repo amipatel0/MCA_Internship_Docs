@@ -1,0 +1,438 @@
+/*  GLOBAL STYLES */
+
+.analytics-container {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  perspective: 2000px;
+  overflow: visible; /* Fix half content showing */
+}
+.glass-card-3d {
+  position: relative;
+  overflow: visible;
+  transform-style: preserve-3d;
+}
+
+
+/*  HEADER */
+
+.analytics-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.analytics-header:hover {
+    transform: translateZ(20px) rotateX(2deg);
+}
+
+.header-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  background: var(--primary-gradient);
+  border-radius: 22px;
+  color: white;
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+  transform: translateZ(30px);
+  font-size: 2.5rem;
+}
+
+.header-content {
+  flex: 1;
+  transform: translateZ(20px);
+}
+
+.header-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1;
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.5) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-top: 0.75rem;
+}
+
+/*  STATS GRID */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.stat-card {
+  perspective: 1000px;
+  height: 100%;
+}
+
+.stat-card-inner {
+  position: relative;
+  padding: 2.5rem;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transform-style: preserve-3d;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-card:hover .stat-card-inner {
+  transform: translateY(-15px) rotateX(10deg) rotateY(10deg);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary);
+}
+
+.stat-icon-wrapper {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 4.5rem;
+  color: var(--primary);
+  opacity: 0.05;
+  transform: translateZ(10px);
+  transition: all 0.5s ease;
+}
+
+.stat-card:hover .stat-icon-wrapper {
+    transform: translateZ(40px) scale(1.1);
+    opacity: 0.15;
+}
+
+.stat-content {
+  position: relative;
+  z-index: 2;
+  transform: translateZ(30px);
+}
+
+.stat-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.stat-value {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--text-main);
+  margin: 0;
+  line-height: 1;
+}
+
+.stat-glow {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.stat-card:hover .stat-glow {
+    top: -50%;
+    left: -50%;
+}
+
+/*  CHARTS GRID */
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.chart-card {
+  padding: 0;
+  border: none;
+}
+
+.card-header-3d {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem;
+  border-bottom: 1px solid var(--border-light);
+  transform: translateZ(30px);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.analytics-bar-header {
+  display: flex;
+  justify-content: space-between; /* 🔥 creates space */
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.bar-value {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.bar-percentage {
+  margin-left: 6px; /* space between value and % */
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.card-content {
+  padding: 2.5rem;
+  transform: translateZ(20px);
+  color: var(--text-main);
+}
+
+/* ==================== ANALYTICS BAR ==================== */
+
+.analytics-bar-wrapper {
+  margin-bottom: 2.5rem;
+}
+
+.bar-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.progress-bar-3d {
+  height: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
+  margin-top: 1rem;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shine 3s infinite;
+}
+
+/* ================================
+   ANALYTICS PAGE ROOT
+   ================================ */
+
+.analytics-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+
+  padding: 40px 20px 120px;
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   SECTION TITLE
+   ================================ */
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--text-main);
+}
+
+
+/* ================================
+   EVENT TABLE CARD (FULL WIDTH)
+   ================================ */
+
+.events-table-card {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-sm);
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   TABLE LAYOUT FIX
+   ================================ */
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;     /* responsive */
+  overflow-y: visible;
+}
+
+
+/* ================================
+   TABLE
+   ================================ */
+
+.events-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;     /* prevents squeezing */
+}
+
+
+/* ================================
+   TABLE HEADER
+   ================================ */
+
+.events-table th {
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-light);
+  white-space: nowrap;
+}
+
+
+/* ================================
+   TABLE BODY
+   ================================ */
+
+.events-table td {
+  padding: 18px 16px;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+}
+
+
+/* ================================
+   EVENT TITLE
+   ================================ */
+
+.event-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+
+
+
+/* Buttons themselves */
+/* Button group */
+.action-btn-group {
+  display: flex;
+  flex-direction: column;   /* vertical buttons */
+  align-items: flex-end;    /* right aligned */
+  gap: 12px;                /* 🔥 SPACE BETWEEN BUTTONS */
+}
+
+.actions-cell {
+  width: 120px;
+  padding: 10px 0;
+
+  border-radius: 999px;  
+  border: none;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition: all 0.25s ease;
+  margin: 6px 0;
+}
+
+.actions-cell:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary);
+  color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+
+
+/* ================================
+   RESPONSIVE FIX
+   ================================ */
+
+@media (max-width: 1024px) {
+  .events-table {
+    min-width: 100%;
+  }
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 1200px) {
+    .header-title { font-size: 2.5rem; }
+    .charts-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .analytics-header { padding: 1.5rem; gap: 1rem; }
+    .header-icon-wrapper { width: 60px; height: 60px; font-size: 1.8rem; }
+    .header-title { font-size: 2rem; }
+    .stats-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .event-row td { padding: 1.5rem 1rem; }
+    .action-btn { padding: 0.5rem 1rem; font-size: 0.8rem; }
+}
+
+@media (max-width: 480px) {
+    .analytics-header { flex-direction: column; text-align: center; }
+    .header-icon-wrapper { margin: 0 auto; }
+}

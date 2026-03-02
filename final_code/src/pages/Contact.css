@@ -1,0 +1,129 @@
+.contact-page-premium {
+  position: relative;
+  z-index: 2;
+}
+
+.max-w-700 {
+  max-width: 700px;
+}
+
+.contact-hero-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--primary-gradient);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: white;
+  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.3);
+}
+
+.info-card-premium {
+  transition: transform 0.3s ease;
+}
+
+.info-card-premium:hover {
+  transform: translateX(10px);
+}
+
+.info-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+
+.info-card-premium:hover .info-icon-wrapper {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 0 20px -5px var(--accent);
+}
+
+.bg-primary-gradient-low {
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px dashed rgba(99, 102, 241, 0.2) !important;
+}
+
+.success-pill {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 12px 20px;
+  border-radius: 12px;
+}
+
+.success-check-mini {
+  width: 20px;
+  height: 20px;
+  background: #10b981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: white;
+}
+
+.top-20 {
+  top: 20px !important;
+  transform: none !important;
+}
+
+.premium-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 14px 16px 14px 44px;
+  color: white;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.premium-input:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-icon-v2 {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.premium-input:focus + .input-icon-v2 {
+  color: var(--primary);
+}
+
+.tracking-widest {
+  letter-spacing: 0.3em;
+}
+
+@media (max-width: 991px) {
+  .contact-page-premium {
+    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2.5rem;
+  }
+}

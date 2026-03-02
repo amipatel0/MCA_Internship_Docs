@@ -1,0 +1,203 @@
+.manage-bookings-premium {
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header Elements */
+.registry-icon-premium {
+  width: 70px;
+  height: 70px;
+  background: var(--primary-gradient);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: white;
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+}
+
+.text-primary-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-primary-gradient-static {
+  color: #818cf8; /* Fallback */
+  background: linear-gradient(to right, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge-premium-v2 {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+}
+
+.max-w-600 { max-width: 600px; }
+.max-w-500 { max-width: 500px; }
+
+/* Stats Cards */
+.stat-card-v3 {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-card-v3:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--primary);
+}
+
+.stat-icon-v3 {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glow-corner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+/* Grid & Table */
+.section-indicator-dash {
+  width: 30px;
+  height: 4px;
+  background: var(--primary-gradient);
+  border-radius: 20px;
+}
+
+.search-box-premium {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box-premium .search-icon {
+  position: absolute;
+  left: 15px;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+.search-box-premium input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 50px;
+  padding: 0 15px 0 50px;
+  border-radius: 12px;
+  color: white;
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.search-box-premium input:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.bg-white-2 { background: rgba(255, 255, 255, 0.02); }
+
+.registry-table thead th {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.registry-row {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.registry-row:hover {
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+.entity-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--primary-gradient);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.shadow-glow-sm {
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+}
+
+.token-tag {
+  padding: 6px 12px;
+  background: rgba(56, 189, 248, 0.05);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.truncate-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Status Chips */
+.registry-status-chip {
+  font-size: 0.65rem;
+  font-weight: 900;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.border-white-5 { border: 1px solid rgba(255, 255, 255, 0.05) !important; }
+.border-white-10 { border: 1px solid rgba(255, 255, 255, 0.1) !important; }
+
+@media (max-width: 991px) {
+  .dashboard-header-premium { text-align: center; }
+  .registry-icon-premium { margin: 0 auto 20px; }
+  .display-4 { font-size: 2.5rem; }
+}
