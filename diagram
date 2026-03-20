@@ -1,0 +1,254 @@
+# Event Management System Diagrams
+
+This document contains architectural and conceptual diagrams for the Event Management System. The diagrams are generated using Mermaid syntax.
+
+## 1. Entity-Relationship (ER) Diagram
+This diagram outlines the database tables, their columns, and how they relate to one another.
+
+```mermaid
+erDiagram
+    USERS ||--o{ EVENTS : organizes
+    USERS ||--o{ BOOKINGS : makes
+    USERS ||--o{ EVENT_REGISTRATIONS : joins
+    USERS ||--o{ EVENT_REVIEWS : writes
+    USERS ||--o{ NOTIFICATIONS : receives
+    USERS ||--o{ USER_TOKENS : owns
+    
+    CATEGORIES ||--o{ EVENTS : categorizes
+    
+    EVENTS ||--o{ BOOKINGS : has
+    EVENTS ||--o{ EVENT_REGISTRATIONS : has
+    EVENTS ||--o{ EVENT_REVIEWS : receives
+
+    USERS {
+        int id PK
+        string name
+        string email
+        string phone
+        string password
+        string role "Admin/Organizer/Customer"
+        string status
+    }
+
+    EVENTS {
+        int id PK
+        int organizer_id FK
+        int category_id FK
+        string title
+        string description
+        date event_date
+        time event_time
+        string location
+        decimal price
+        int capacity
+        string image
+        string status "Pending/Approved/Rejected"
+    }
+
+    CATEGORIES {
+        int id PK
+        string category_name
+    }
+
+    BOOKINGS {
+        int id PK
+        int user_id FK
+        int event_id FK
+        decimal amount
+        string payment_status
+        string ticket_id
+    }
+
+    EVENT_REGISTRATIONS {
+        int id PK
+        int user_id FK
+        int event_id FK
+        string status
+    }
+
+    EVENT_REVIEWS {
+        int id PK
+        int user_id FK
+        int event_id FK
+        int rating
+        string review
+        datetime created_at
+    }
+
+    CONTACT_MESSAGE {
+        int id PK
+        string name
+        string email
+        string message
+        string status
+        datetime created_at
+    }
+
+    NOTIFICATION {
+        int id PK
+        int user_id FK
+        string message
+        datetime created_at
+    }
+
+    USER_TOKENS {
+        int id PK
+        int user_id FK
+        string token
+    }
+```
+
+## 2. UML Class Diagram
+This captures the core classes in your application logic. Note that `User` acts as the superclass for different distinct roles.
+
+```mermaid
+classDiagram
+    class User {
+        +int id
+        +String name
+        +String email
+        +String phone
+        +String password
+        +String role
+        +String status
+        +login()
+        +register()
+        +updateProfile()
+    }
+    
+    class Admin {
+        +manageUsers()
+        +manageEvents()
+        +manageCategories()
+        +viewReports()
+    }
+    
+    class Organizer {
+        +createEvent()
+        +updateEvent()
+        +viewAnalytics()
+        +manageMyEvents()
+    }
+    
+    class Customer {
+        +bookEvent(Event)
+        +cancelBooking()
+        +addReview(Event)
+        +viewMyTickets()
+    }
+    
+    User <|-- Admin
+    User <|-- Organizer
+    User <|-- Customer
+    
+    class Event {
+        +int id
+        +String title
+        +String description
+        +Date date
+        +Time time
+        +String location
+        +Float price
+        +int capacity
+        +String status
+        +getEventDetails()
+    }
+    
+    class Category {
+        +int id
+        +String category_name
+        +getCategory()
+    }
+    
+    class Booking {
+        +int id
+        +Float amount
+        +String payment_status
+        +String ticket_id
+        +processPayment()
+        +generateTicket()
+    }
+    
+    class EventReview {
+        +int id
+        +int rating
+        +String review
+        +submitReview()
+    }
+    
+    Category "1" -- "*" Event : categorizes
+    User "1" -- "*" Booking : makes
+    Event "1" -- "*" Booking : has
+    Organizer "1" -- "*" Event : organizes
+    User "1" -- "*" EventReview : writes
+    Event "1" -- "*" EventReview : receives
+```
+
+## 3. Sequence Diagram (Booking an Event Ticket)
+This diagram illustrates the chronological flow of messages between system components when a Customer books a ticket for an event.
+
+```mermaid
+sequenceDiagram
+    actor Customer
+    participant Frontend UI
+    participant Backend API
+    participant Database
+
+    Customer->>Frontend UI: Clicks "Book Ticket"
+    activate Frontend UI
+    Frontend UI->>Frontend UI: Validate Inputs
+    Frontend UI->>Backend API: POST /customer/create_order.php (user_id, event_id, amount)
+    activate Backend API
+    
+    Backend API->>Database: Check event capacity (SELECT count)
+    activate Database
+    Database-->>Backend API: Return current bookings count
+    deactivate Database
+    
+    alt Event is Full
+        Backend API-->>Frontend UI: Error: Event Sold Out
+        Frontend UI-->>Customer: Display Error Message
+    else Event has Capacity
+        Backend API->>Backend API: Process mock payment / generate ticket_id
+        Backend API->>Database: INSERT INTO bookings
+        activate Database
+        Database-->>Backend API: Success (booking_id)
+        deactivate Database
+        
+        Backend API-->>Frontend UI: 200 OK (Booking Successful)
+        Frontend UI-->>Customer: Show "Booking Confirmed" & Redirect to Tickets
+    end
+    deactivate Backend API
+    deactivate Frontend UI
+```
+
+## 4. Activity Diagram (Creating an Event)
+Provides a visual representation of the workflow when an Organizer creates a new Event in the system.
+
+```mermaid
+stateDiagram-v2
+    [*] --> Login
+    Login --> OrganizerDashboard : Valid Organizer Credentials
+    OrganizerDashboard --> ClickCreateEvent : Selects Create Event Menu
+    
+    state CreateEventForm {
+        ClickCreateEvent --> FillDetails : Fill Title, Date, Time, Venue, Price, Capacity
+        FillDetails --> UploadCoverImage : Choose Image
+        UploadCoverImage --> SubmitForm : Click 'Publish'
+    }
+    
+    SubmitForm --> ValidateFrontend : System validates inputs
+    
+    ValidateFrontend --> FillDetails : [Validation Failed]
+    ValidateFrontend --> BackendAPI : [Validation Passed]
+    
+    state BackendAPI {
+        ProcessData --> SaveImage : Uploads Image to /uploads
+        SaveImage --> InsertDB : INSERT INTO events
+        InsertDB --> SuccessResponse : Returns JSON Success
+    }
+    
+    BackendAPI --> ShowSuccessMessage : Frontend receives response
+    ShowSuccessMessage --> OrganizerDashboard : Redirects back to Dashboard
+    OrganizerDashboard --> [*] : End Flow
+```

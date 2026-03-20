@@ -1,0 +1,54 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="Page-1" id="G2qi7ZwfdQVEuotvdzCk">
+    <mxGraphModel dx="856" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zTSxLISyM0ydyLE1TyE_-8" edge="1" parent="1" source="zTSxLISyM0ydyLE1TyE_-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="zTSxLISyM0ydyLE1TyE_-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zTSxLISyM0ydyLE1TyE_-12" connectable="0" parent="zTSxLISyM0ydyLE1TyE_-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Check for Event details" vertex="1">
+          <mxGeometry relative="1" x="-0.4444" y="-4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zTSxLISyM0ydyLE1TyE_-10" edge="1" parent="1" source="zTSxLISyM0ydyLE1TyE_-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="zTSxLISyM0ydyLE1TyE_-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zTSxLISyM0ydyLE1TyE_-14" connectable="0" parent="zTSxLISyM0ydyLE1TyE_-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Response accept/reject" vertex="1">
+          <mxGeometry relative="1" x="0.3314" y="4" as="geometry">
+            <mxPoint x="55" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zTSxLISyM0ydyLE1TyE_-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Event Management" vertex="1">
+          <mxGeometry height="80" width="120" x="380" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zTSxLISyM0ydyLE1TyE_-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="80" width="120" x="380" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="zTSxLISyM0ydyLE1TyE_-7" edge="1" parent="1" source="zTSxLISyM0ydyLE1TyE_-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="zTSxLISyM0ydyLE1TyE_-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zTSxLISyM0ydyLE1TyE_-11" connectable="0" parent="zTSxLISyM0ydyLE1TyE_-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Event(insert,update,delete)" vertex="1">
+          <mxGeometry relative="1" x="-0.297" y="-1" as="geometry">
+            <mxPoint x="44" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zTSxLISyM0ydyLE1TyE_-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Organizer" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="zTSxLISyM0ydyLE1TyE_-9" edge="1" parent="1" source="zTSxLISyM0ydyLE1TyE_-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="zTSxLISyM0ydyLE1TyE_-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zTSxLISyM0ydyLE1TyE_-13" connectable="0" parent="zTSxLISyM0ydyLE1TyE_-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Response" vertex="1">
+          <mxGeometry relative="1" x="-0.0343" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zTSxLISyM0ydyLE1TyE_-6" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=none;" value="events" vertex="1">
+          <mxGeometry height="60" width="120" x="720" y="200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
