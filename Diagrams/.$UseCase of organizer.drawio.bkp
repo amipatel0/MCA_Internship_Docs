@@ -1,0 +1,126 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="Page-1" id="yju64mO9BmfOfRXX79wO">
+    <mxGraphModel dx="872" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object placeholders="1" c4Name="The Event Management System" c4Type="SystemScopeBoundary" c4Application="Software System" label="&lt;font&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="iAj-wbrTCQKymaEf8JYC-2">
+          <mxCell parent="1" style="rounded=1;fontSize=15;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="900" width="505" x="170" y="140" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;fontSize=15;" value="Organizer" vertex="1">
+          <mxGeometry height="60" width="30" x="60" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-4" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;entryX=0.033;entryY=0.613;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=15;" target="iAj-wbrTCQKymaEf8JYC-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="90" y="465" as="sourcePoint" />
+            <mxPoint x="540" y="305" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-5" connectable="0" parent="iAj-wbrTCQKymaEf8JYC-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];strokeColor=#0F8B8D;fontColor=#0B0B0B;fillColor=#FAE5C7;labelBackgroundColor=#FFFFFF;fontSize=15;" value="Create Organizer Account &amp;amp; Verify creadentials" vertex="1">
+          <mxGeometry relative="1" x="-0.1206" y="1" as="geometry">
+            <mxPoint x="151" y="-97" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-6" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;fontSize=15;" value="Register &amp;amp; Login" vertex="1">
+          <mxGeometry height="80" width="120" x="540" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;fontSize=15;" value="View Events" vertex="1">
+          <mxGeometry height="80" width="120" x="540" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-8" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;fontSize=15;" value="&amp;nbsp;Book Event" vertex="1">
+          <mxGeometry height="80" width="120" x="540" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-9" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;fontSize=15;" value="Make Payement" vertex="1">
+          <mxGeometry height="80" width="120" x="540" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-10" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;fontSize=15;" value="Generate Ticket" vertex="1">
+          <mxGeometry height="80" width="120" x="540" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-11" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;fontSize=15;" value="Receive notification" vertex="1">
+          <mxGeometry height="80" width="120" x="540" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-12" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;entryX=0.033;entryY=0.638;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=15;" target="iAj-wbrTCQKymaEf8JYC-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="90" y="465" as="sourcePoint" />
+            <mxPoint x="540" y="505" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-13" connectable="0" parent="iAj-wbrTCQKymaEf8JYC-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];strokeColor=#0F8B8D;fontColor=#0B0B0B;fillColor=#FAE5C7;rotation=-15;labelBackgroundColor=#FFFFFF;fontSize=15;" value="Browse available Events" vertex="1">
+          <mxGeometry relative="1" x="0.332" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-14" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;fontSize=15;" target="iAj-wbrTCQKymaEf8JYC-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="90" y="465" as="sourcePoint" />
+            <mxPoint x="540" y="615" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-15" connectable="0" parent="iAj-wbrTCQKymaEf8JYC-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;fontSize=15;" value="" vertex="1">
+          <mxGeometry relative="1" x="0.293" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-16" connectable="0" parent="iAj-wbrTCQKymaEf8JYC-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];strokeColor=#0F8B8D;fontColor=#0B0B0B;fillColor=#FAE5C7;rotation=-10;labelBackgroundColor=#FFFFFF;fontSize=15;" value="Select event and book" vertex="1">
+          <mxGeometry relative="1" x="0.408" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-17" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=15;" target="iAj-wbrTCQKymaEf8JYC-9" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="90" y="465" as="sourcePoint" />
+            <mxPoint x="540" y="725" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-18" connectable="0" parent="iAj-wbrTCQKymaEf8JYC-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];strokeColor=#0F8B8D;fontColor=#0B0B0B;fillColor=#FAE5C7;labelBackgroundColor=#FFFFFF;fontSize=15;" value="Pay event fees" vertex="1">
+          <mxGeometry relative="1" x="0.2081" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-19" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;entryX=0;entryY=0.625;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=15;" target="iAj-wbrTCQKymaEf8JYC-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="90" y="465" as="sourcePoint" />
+            <mxPoint x="540" y="835" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-20" connectable="0" parent="iAj-wbrTCQKymaEf8JYC-19" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];strokeColor=#0F8B8D;fontColor=#0B0B0B;fillColor=#FAE5C7;labelBackgroundColor=#FFFFFF;fontSize=15;" value="Receive booking ticket" vertex="1">
+          <mxGeometry relative="1" x="0.1258" y="1" as="geometry">
+            <mxPoint x="41" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-21" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=15;" target="iAj-wbrTCQKymaEf8JYC-11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="90" y="465" as="sourcePoint" />
+            <mxPoint x="546" y="929" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-22" connectable="0" parent="iAj-wbrTCQKymaEf8JYC-21" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];strokeColor=#0F8B8D;fontColor=#0B0B0B;fillColor=#FAE5C7;labelBackgroundColor=#FFFFFF;fontSize=15;" value="Give event updates" vertex="1">
+          <mxGeometry relative="1" x="0.227" as="geometry">
+            <mxPoint x="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-23" parent="1" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Logout&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="530" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-24" edge="1" parent="1" source="iAj-wbrTCQKymaEf8JYC-3" style="endArrow=none;html=1;rounded=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;entryX=0.072;entryY=0.65;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" target="iAj-wbrTCQKymaEf8JYC-23" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="110" y="470" as="sourcePoint" />
+            <mxPoint x="140" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-25" connectable="0" parent="iAj-wbrTCQKymaEf8JYC-24" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;" value="" vertex="1">
+          <mxGeometry relative="1" x="0.4756" y="-2" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAj-wbrTCQKymaEf8JYC-26" connectable="0" parent="iAj-wbrTCQKymaEf8JYC-24" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];strokeColor=#0F8B8D;fontColor=#0B0B0B;fillColor=#FAE5C7;fontSize=15;labelBackgroundColor=#FFFFFF;" value="Logout from sytem" vertex="1">
+          <mxGeometry relative="1" x="0.4448" y="-4" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

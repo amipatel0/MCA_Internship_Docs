@@ -154,12 +154,13 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Hg04pBu9N9LUgpOgCB4y-13" edge="1" parent="1" source="Hg04pBu9N9LUgpOgCB4y-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.442;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;fontSize=15;" target="Hg04pBu9N9LUgpOgCB4y-4">
+        <mxCell id="Hg04pBu9N9LUgpOgCB4y-13" edge="1" parent="1" source="Hg04pBu9N9LUgpOgCB4y-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;fontSize=15;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="340" y="80" />
               <mxPoint x="123" y="80" />
             </Array>
+            <mxPoint x="123" y="140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="SNVHmEJL0IYC_Z5TseEG-13" connectable="0" parent="Hg04pBu9N9LUgpOgCB4y-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;fontSize=15;labelBackgroundColor=#FFFFFF;" value="&lt;span style=&quot;&quot;&gt;Response accept/reject&lt;/span&gt;" vertex="1">
